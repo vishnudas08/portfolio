@@ -1,0 +1,8 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+.header-name {
+  @apply text-4xl md:text-4xl font-bold text-gray-800 mb-2;
+}
