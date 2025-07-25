@@ -1,6 +1,6 @@
 # Darla Vishnu Vardhan Portfolio
 
-## Project Overview
+## Project Overview [Portfolio-link]([http://localhost:5173](https://vishnudasportfolio.netlify.app/))
 
 This is a portfolio website built with **React** and styled using **TailwindCSS**.
 
@@ -45,7 +45,7 @@ Replace `` with the actual GitHub URL.
     npm run dev
     ```
 
-3. Open [http://localhost:3000](http://localhost:5173) in your browser to view your project.
+3. Open [http://localhost:5173](http://localhost:5173) in your browser to view your project.
 
 ## Building for Production
 
