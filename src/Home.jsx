@@ -1,5 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaVideo } from "react-icons/fa";
+import { SiHackerearth } from "react-icons/si";
+
 import {
     FaHome,
     FaUser,
@@ -8,7 +10,7 @@ import {
     FaTrophy,
     FaEnvelope,
 } from "react-icons/fa";
-import { fullname, links, profileImage, tagline } from "./data";
+import { fullname, links, profileImage, resumePath, tagline } from "./data";
 
 export default function Home() {
     return (
@@ -25,13 +27,13 @@ export default function Home() {
                     <a href={links.github.link} className="text-green-600 text-2xl">
                         <FaGithub />
                     </a>
-                    <a href={links.linkedin.link} className="text-green-400 text-2xl">
-                        <FaVideo />
+                    <a href={links.hackerrank.link} className="text-green-400 text-2xl">
+                        <SiHackerearth />
                     </a>
                 </div>
 
                 <a
-                    href="/resume.pdf"
+                    href={resumePath}
                     download
                     className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300"
                 >

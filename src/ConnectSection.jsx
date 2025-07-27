@@ -28,7 +28,7 @@ const ConnectSection = () => {
             <div className="text-left">
               <p className="text-gray-500">LinkedIn</p>
               <a
-                href="http://bit.ly/3Qr8sbP"
+                href={links.linkedin.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-gray-900 hover:underline"
@@ -44,7 +44,7 @@ const ConnectSection = () => {
             <div className="text-left">
               <p className="text-gray-500">GitHub</p>
               <a
-                href="http://bit.ly/3UFO9K9"
+                href={links?.github?.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-gray-900 hover:underline"

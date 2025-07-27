@@ -119,7 +119,7 @@ const ProjectModal = ({ isOpen, onClose, project, currentSlide, setCurrentSlide 
                   <ArrowRight />
                 </button>
               </div>
-              <div className="text-center text-sm font-medium text-foreground">Attachments description</div>
+              {/* <div className="text-center text-sm font-medium text-foreground">Attachments description</div> */}
 
 
 
@@ -130,7 +130,7 @@ const ProjectModal = ({ isOpen, onClose, project, currentSlide, setCurrentSlide 
           {/* Project skills */}
           <div className="flex gap-4 mt-6 md:mt-0">
             {project.skills.map((icon, idx) => (
-              <img key={idx} src={icon} alt="skill-icon" className="w-12 h-auto" />
+              <img key={idx} src={icon} alt="skill-icon" className="w-18 h-auto" />
             ))}
           </div>
           {/* Project Details Section */}
