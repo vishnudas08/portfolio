@@ -1,12 +1,92 @@
-# React + Vite
+# Darla Vishnu Vardhan Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview  
+[Portfolio Link](https://vishnudasportfolio.netlify.app/)
 
-Currently, two official plugins are available:
+This is a portfolio website built with **React** and styled using **TailwindCSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Running Locally](#running-locally)
+- [Building for Production](#building-for-production)
+- [Deploying to Netlify (Using the dist Folder)](#deploying-to-netlify-using-the-dist-folder)
+- [Contact](#contact)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Prerequisites
+
+- **Node.js** and **npm** installed
+- **Git** installed
+
+## Getting Started
+
+### 1. Clone the Repository
+
+Open your terminal and run:
+
+```bash
+git clone 
+cd 
+```
+
+Replace `` with the actual GitHub URL.
+
+## Running Locally
+
+1. **Install dependencies**:
+
+    ```bash
+    npm install
+    ```
+
+2. **Start the development server**:
+
+    ```bash
+    npm run dev
+    ```
+
+3. Open [http://localhost:5173](http://localhost:5173) in your browser to view your project.
+
+## Building for Production
+
+To generate an optimized production build in the `dist` folder (assuming your project is set up to output to `dist`):
+
+```bash
+npm run build
+```
+
+After the build finishes, the production-ready files will be in the `dist` directory.
+
+## Deploying to Netlify (Using the dist Folder)
+
+You can easily deploy your portfolio on **Netlify** by uploading the `dist` folder:
+
+1. **Log in to [Netlify](https://app.netlify.com/)**.
+2. In the left sidebar, click on **"Deploys"**.
+3. Scroll down to the section labeled **"Deploy your site"**.
+4. You’ll see a **"Drag and drop your site output folder here"** area.
+5. **Drag and drop your local `dist` folder** onto this area.
+6. Netlify will automatically upload and host your project.
+
+**Netlify deployment steps illustrated:**
+
+| Step     | Action                                               |
+|----------|------------------------------------------------------|
+| 1        | Log in to Netlify                                    |
+| 2        | Open Project -> Deploys (left side panel)            |
+| 3        | Scroll to "Drag and drop your site output folder"    |
+| 4        | Drop the `dist` folder                               |
+| 5        | Wait for deployment to finish                        |
+| 6        | Access your deployed site via the provided Netlify URL |
+
+## Additional Tips
+
+- Whenever you make changes, rebuild your project (`npm run build`) and re-upload the updated `dist` folder on Netlify.
+- Make sure your build config is set to output files to `dist` (default in Vite; for Create React App, the output is usually `build`).
+
+## Contact
+
+For questions or suggestions, please reach out via your preferred contact method!
+
+Feel free to copy, modify, or elaborate on these instructions to fit your project needs.
