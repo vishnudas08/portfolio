@@ -75,6 +75,26 @@ const ProjectModal = ({ isOpen, onClose, project, currentSlide, setCurrentSlide 
                   <span className="text-sm font-medium">View Project on GitHub</span>
                 </a>
 
+                {
+                  project?.github2 && (
+                     <a
+                  href={project?.github2}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center bg-[#effaf0] text-black px-4 py-2 rounded-full hover:bg-[#d6f2dc] transition"
+                >
+                  <div className="bg-[#2ea44f] rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                    <img
+                      src="https://img.icons8.com/ios-glyphs/24/ffffff/github.png"
+                      alt="GitHub"
+                      className="w-4 h-4"
+                    />
+                  </div>
+                  <span className="text-sm font-medium">View Project on GitHub2</span>
+                </a>
+                  )
+                }
+
               </div>
             </div>
 

@@ -44,7 +44,7 @@ export default function Home() {
             {/* Profile Image */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                 <div className="relative w-64 h-64 md:w-[20rem] md:h-[20rem] lg:w-[26rem] lg:h-[26rem]  -ml-0 md:-ml-16 bg-blue-200 rounded-full flex items-center justify-center z-10">
-                    <div className="w-56 h-56 md:w-[20rem] md:h-[20rem] lg:w-[22rem] lg:h-[22rem] rounded-full overflow-hidden border shadow-2xl">
+                    <div className="w-56 h-56 md:w-[20rem] md:h-[20rem] lg:w-[24rem] lg:h-[24rem] rounded-full overflow-hidden border shadow-2xl">
                         <img
                             src={profileImage}
                             alt="Profile"

@@ -2,15 +2,26 @@ import pythonIcon from './assets/image.png'
 import project from './assets/project.png'
 import project1 from './assets/project_attachment.jpg'
 import project2 from './assets/project_attachment2.jpg'
-import profilePicture from './assets/profile-image.png'
+// import profilePicture from './assets/profile-image.png'
+import profilePicture from './assets/img.jpeg'
 
+// Skill related images
+import transformersIcon from './assets/skills/transformer.png' 
+import pytorchIcon from './assets/skills/pytorch-612.png'
+import textmodel from './assets/skills/textmodel.png'
 import excelIcon from './assets/skills/icons8-excel-48.png'
+
 import powerbiIcon from './assets/skills/power-bi.png'
 import pythonSkillIcon from './assets/skills/python-612.png'
 import timeseriesIcon from './assets/skills/timeseries.jpg'
 import excelSkillIcon from './assets/skills/excel-612.png'
 
 // Project related images reading
+import opIcon from './assets/projects/op.png'
+import bertIcon from './assets/projects/bert.png'
+import cnnModel from './assets/projects/CNNModel.png'
+import trainingPreds from './assets/projects/training.png'
+import textClassificationmainImage from './assets/projects/text.png'
 import stockPrediction from './assets/projects/stockprediction/stock-prediction.png'
 import stockPredictionAttachment from './assets/projects/stockprediction/stock-prediction-attachment.png'
 import stockPredictionAttachment1 from './assets/projects/stockprediction/stock-prediction-attachment1.png'
@@ -77,7 +88,7 @@ export var projectStats = [
   },
   {
     img: pythonIcon,
-    count: 2,
+    count: 3,
     label: "PythonProject",
   }
 ];
@@ -89,7 +100,7 @@ export const projects = [
     domain: "Computer Vision / Deep Learning",
     domainColor: "text-purple-600",
     image: cnnProject, // thumbnail image
-    attachments: [project, project1, project2], // carousel images/screenshots
+    attachments: [trainingPreds, cnnModel,project1], // carousel images/screenshots
     overview:
       "Built two deep learning models using Convolutional Neural Networks (CNNs) to classify images — one for digit recognition (MNIST) and another for binary image classification (Cats vs Dogs). Models were built and trained from scratch using PyTorch.",
     details: {
@@ -140,14 +151,15 @@ export const projects = [
       ]
 
     },
-    github: "https://github.com/your-username/image-classification-cnn", // ✅ Add GitHub link
-    linkedin: "https://www.linkedin.com/posts/your-post-id", // ✅ Add LinkedIn engagement lin
+    github: "https://github.com/vishnudas08/Digit-Recognition-using-CNN", // ✅ Add GitHub link
+    github2:"https://github.com/vishnudas08/binary-image-classification_PyTorch",
+    //linkedin: "https://www.linkedin.com/posts/your-post-id", // ✅ Add LinkedIn engagement lin
     skills: [
       pythonSkillIcon
     ]
   },
   {
-    id: 1,
+    id: 9,
     title: "📈 Stock Price Forecasting with LSTM + Technical Indicators",
     domain: "Time Series Forecasting / Deep Learning / Financial Analytics",
     domainColor: "text-purple-600",
@@ -206,35 +218,53 @@ export const projects = [
     ]
   },
   {
-    id: 1,
-    title: "Image Classification with CNN",
-    domain: "Computer Vision / Deep Learning",
+    id: 10,
+    title: "Small AI Tool for Text Classification using BERT",
+    domain: "  NLP (Text Classification) / Transformers / Deep Learning",
     domainColor: "text-purple-600",
-    image: project, // thumbnail image
-    attachments: [project, project1, project2], // carousel images/screenshots
+    image:textClassificationmainImage, // thumbnail image
+    attachments: [textmodel,bertIcon, opIcon], // carousel images/screenshots
     overview:
-      "Built a deep learning model to classify images into categories using Convolutional Neural Networks (CNNs) trained on a custom dataset.",
+      " Tools: Python, PyTorch, Hugging Face Transformers, BERT, AG News Dataset",
     details: {
       description:
-        "This project focuses on developing a robust image classification model using CNNs in Python with TensorFlow and Keras. The model was trained on a dataset containing 10,000+ labeled images across 5 categories such as dogs, cats, birds, cars, and flowers.",
+        "Designed a lightweight yet effective NLP tool that leverages the BERT transformer architecture to classify news headlines into four categories. This project demonstrates the practical application of transfer learning and deep learning techniques for text classification.",
       features: [
-        "Used data augmentation to increase model robustness",
-        "Implemented transfer learning with MobileNetV2",
-        "Achieved 92% accuracy on test dataset",
-        "Visualized model predictions with Grad-CAM"
+        "Built using PyTorch and Hugging Face Transformers (bert-base-uncased)",
+
+  "Automated preprocessing, tokenization, and batching of text using DataLoader",
+
+ "Achieved ~85% validation accuracy on the AG News dataset",
+
+  "Integrated stratified sampling to handle class imbalance",
+
+"Created an inference pipeline for real-time predictions",
+       
       ],
       challenges: [
-        "Overfitting due to small dataset size",
-        "Uneven class distribution",
-        "Hardware limitations while training large models"
+        "Model overfitting on reduced datasets",
+
+   "GPU memory limitations during fine-tuning",
+
+   "Handling long text truncation without losing context",
+       
       ],
-      solution:
-        "Utilized real-time data augmentation and early stopping to reduce overfitting, employed pre-trained models to improve accuracy, and optimized the training pipeline for GPU usage."
+      solution:[
+        "Added Dropout layers and used CrossEntropyLoss + Adam Optimizer",
+
+   " Used truncation & padding strategies to ensure consistent input formats",
+
+" Balanced training data with stratified sampling to maintain class representation",
+
+" Deployed the model using an interactive Python interface (notebook-based)",
+      ]
+       
     },
     github: "https://github.com/your-username/image-classification-cnn", // ✅ Add GitHub link
     linkedin: "https://www.linkedin.com/posts/your-post-id", // ✅ Add LinkedIn engagement lin
     skills: [
-      excelSkillIcon, powerbiIcon
+    transformersIcon,pytorchIcon, pythonSkillIcon
+  
     ]
   }
 
