@@ -43,42 +43,45 @@ const ProjectModal = ({ isOpen, onClose, project, currentSlide, setCurrentSlide 
               {/* Buttons */}
               <div className="mt-6 flex flex-wrap gap-4">
 
-                <a
-                  href={project.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center bg-[#e8f0fe] text-black px-4 py-2 rounded-full hover:bg-[#d0e2fc] transition"
-                >
-                  <div className="bg-[#0077b5] rounded-full w-8 h-8 flex items-center justify-center mr-3">
-                    <img
-                      src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png"
-                      alt="LinkedIn"
-                      className="w-4 h-4"
-                    />
-                  </div>
-                  <span className="text-sm font-medium">View Project Engagement</span>
-                </a>
+                {project?.linkedin ? (
+                  <a
+                    href={project.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center bg-[#e8f0fe] text-black px-4 py-2 rounded-full hover:bg-[#d0e2fc] transition"
+                  >
+                    <div className="bg-[#0077b5] rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                      <img
+                        src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png"
+                        alt="LinkedIn"
+                        className="w-4 h-4"
+                      />
+                    </div>
+                    <span className="text-sm font-medium">View Project Engagement</span>
+                  </a>
+                ) : null}
 
-                <a
-                  href={project?.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center bg-[#effaf0] text-black px-4 py-2 rounded-full hover:bg-[#d6f2dc] transition"
-                >
-                  <div className="bg-[#2ea44f] rounded-full w-8 h-8 flex items-center justify-center mr-3">
-                    <img
-                      src="https://img.icons8.com/ios-glyphs/24/ffffff/github.png"
-                      alt="GitHub"
-                      className="w-4 h-4"
-                    />
-                  </div>
-                  <span className="text-sm font-medium">View Project on GitHub</span>
-                </a>
+                {project?.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center bg-[#effaf0] text-black px-4 py-2 rounded-full hover:bg-[#d6f2dc] transition"
+                  >
+                    <div className="bg-[#2ea44f] rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                      <img
+                        src="https://img.icons8.com/ios-glyphs/24/ffffff/github.png"
+                        alt="GitHub"
+                        className="w-4 h-4"
+                      />
+                    </div>
+                    <span className="text-sm font-medium">View Project on GitHub</span>
+                  </a>
+                ) : null}
 
-                {
-                  project?.github2 && (
-                     <a
-                  href={project?.github2}
+                {project?.github2 && (
+                  <a
+                    href={project.github2}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center bg-[#effaf0] text-black px-4 py-2 rounded-full hover:bg-[#d6f2dc] transition"
@@ -149,7 +152,7 @@ const ProjectModal = ({ isOpen, onClose, project, currentSlide, setCurrentSlide 
 
           {/* Project skills */}
           <div className="flex gap-4 mt-6 md:mt-0">
-            {project.skills.map((icon, idx) => (
+            {project.skills?.map((icon, idx) => (
               <img key={idx} src={icon} alt="skill-icon" className="w-18 h-auto" />
             ))}
           </div>
@@ -168,7 +171,7 @@ const ProjectModal = ({ isOpen, onClose, project, currentSlide, setCurrentSlide 
             <div>
               <h3 className="text-lg font-semibold mb-2">Key Features</h3>
               <ul className="list-disc list-inside space-y-1">
-                {project.details.features.map((feature, idx) => (
+                {project.details?.features?.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>
@@ -178,7 +181,7 @@ const ProjectModal = ({ isOpen, onClose, project, currentSlide, setCurrentSlide 
             <div>
               <h3 className="text-lg font-semibold mb-2">Challenges Faced</h3>
               <ul className="list-disc list-inside space-y-1">
-                {project.details.challenges.map((challenge, idx) => (
+                {project.details?.challenges?.map((challenge, idx) => (
                   <li key={idx}>{challenge}</li>
                 ))}
               </ul>

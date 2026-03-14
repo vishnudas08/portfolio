@@ -8,7 +8,7 @@ const MyExperience = () => {
       <div className="max-w-5xl mx-auto rounded-lg">
         <h1 className="header-name">MY EXPERIENCE</h1>
 
-        {experiences.map((exp, index) => (
+        {experiences?.map((exp, index) => (
           <div key={index} className="mb-10">
             <h2 className="text-xl font-bold text-gray-700 mb-2">
               {exp.role} - {exp.company}
@@ -16,7 +16,7 @@ const MyExperience = () => {
             </h2>
 
             <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
-              {exp.responsibilities.map((item, idx) => (
+              {exp.responsibilities?.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
             </ul>

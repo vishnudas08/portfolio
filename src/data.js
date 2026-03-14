@@ -3,13 +3,14 @@ import project from './assets/project.png'
 import project1 from './assets/project_attachment.jpg'
 import project2 from './assets/project_attachment2.jpg'
 // import profilePicture from './assets/profile-image.png'
-import profilePicture from './assets/img.jpeg'
+import profilePicture from './assets/Vishnu_btech.png'
 
 // Skill related images
 import transformersIcon from './assets/skills/transformer.png' 
 import pytorchIcon from './assets/skills/pytorch-612.png'
 import textmodel from './assets/skills/textmodel.png'
-import excelIcon from './assets/skills/icons8-excel-48.png'
+import braintumorImg from './assets/projects/braintumorImg.jpg'
+import dlIcon from './assets/skills/dl.png'
 
 import powerbiIcon from './assets/skills/power-bi.png'
 import pythonSkillIcon from './assets/skills/python-612.png'
@@ -35,7 +36,7 @@ import sql_certificate from './assets/certificates/SQL-certificate.jpg'
 
 
 export const fullname = 'DARLA VISHNU VARDHAN';
-export const tagline = 'Aspiring machine learning engineer';
+export const tagline = 'machine learning engineer';
 export const email = "vishnudaslog2002@gmail.com";
 export const profileImage = profilePicture;
 export const resumePath = "/resume.pdf";
@@ -63,7 +64,11 @@ export const skills = [
   "PYTORCH",
   'CONVULUTIONAL NEURAL NETWORKS',
   'TRANSFORMERS',
-  "EXCEL",
+  "NLP FINE-TUNING",
+  "IMAGE CLASSIFICATION",
+  "IMAGE SEGMENTATION",
+  "OBJECT DETECTION",
+  "COMPUTER VISION",
   "POWERBI",
   "SQL",
 
@@ -82,9 +87,10 @@ export var projectStats = [
     label: "PowerBI Project",
   },
   {
-    img: excelIcon,
+    img: dlIcon,
     count: 1,
-    label: "Excel Project",
+    label: "Deep Learning Project",
+   
   },
   {
     img: pythonIcon,
@@ -94,6 +100,99 @@ export var projectStats = [
 ];
 
 export const projects = [
+   
+{
+  id: 6,
+  title: "AI-Powered Brain Tumor Segmentation: From YOLO to Vision Transformers",
+  domain: "Computer Vision / Deep Learning / Image Segmentation",
+  domainColor: "text-purple-600",
+  image: braintumorImg,
+  attachments: [braintumorImg],
+  overview:
+    "Built an end-to-end AI pipeline for brain tumor segmentation from MRI scans, " +
+    "tackling a critical real-world healthcare problem. Engineered automated data preprocessing, " +
+    "trained a YOLO11 model for high-speed instance segmentation, and benchmarked advanced " +
+    "architectures — U-Net, DeepLabV3, RAAGR2-Net, and fine-tuned SegFormer — to deliver " +
+    "state-of-the-art medical precision across full-cycle computer vision workflows.",
+  details: {
+    description: [
+      "Designed and implemented a complete MRI brain tumor segmentation pipeline covering data ingestion, preprocessing, model training, and evaluation across multiple architectures.",
+      "Trained a YOLO11 model for real-time instance segmentation, achieving high-speed inference suitable for clinical decision-support workflows.",
+      "Benchmarked and compared U-Net, DeepLabV3, RAAGR2-Net, and fine-tuned SegFormer to identify the optimal architecture for medical-grade pixel-level accuracy.",
+      "Delivered a scalable, modular codebase enabling reproducible experiments and straightforward adaptation to other medical imaging segmentation tasks.",
+    ],
+    features: [
+      "Automated MRI data preprocessing pipeline with augmentation and normalization",
+      "YOLO11 instance segmentation for high-speed, real-time tumor detection",
+      "U-Net encoder-decoder architecture for precise pixel-level segmentation",
+      "DeepLabV3 with atrous convolutions for multi-scale context capture",
+      "RAAGR2-Net with recurrent attention gates for refined boundary detection",
+      "Fine-tuned SegFormer — Vision Transformer-based architecture for SOTA accuracy",
+      "Comprehensive benchmarking suite: Dice score, IoU, precision, recall, F1",
+      "Visual overlays and mask comparison tools for qualitative evaluation",
+      "Modular pipeline design supporting plug-and-play model experimentation",
+    ],
+    challenges: [
+      "Handling severe class imbalance between tumor and non-tumor pixels in MRI datasets",
+      "Preserving fine-grained tumor boundary details across varied MRI scan qualities",
+      "Balancing inference speed (YOLO) vs segmentation precision (SegFormer) for clinical use",
+      "Fine-tuning Vision Transformers with limited labeled medical imaging data",
+      "Ensuring consistent preprocessing across heterogeneous MRI acquisition protocols",
+    ],
+    solution: [
+      "Applied weighted loss functions (Dice + BCE combo) to address pixel-level class imbalance",
+      "Used aggressive data augmentation — flipping, elastic deformation, intensity shifts — to improve generalization",
+      "Benchmarked latency-accuracy tradeoff across all models to guide deployment decisions",
+      "Leveraged transfer learning and domain-specific fine-tuning to maximize SegFormer performance on limited data",
+      "Standardized preprocessing steps into a reusable module ensuring reproducibility across all architectures",
+    ],
+  },
+},
+ 
+  {
+    id: 5,
+    title: "🤖 RAG Chatbot (FastAPI + Offline LLMs + RAG)",
+    domain: "Generative AI / Backend Development / NLP",
+    domainColor: "text-green-600",
+    image: textmodel,
+    attachments: [textmodel],
+    overview:
+      "Built an intelligent customer service chatbot for a dumpster rental company using Retrieval Augmented Generation (RAG). The assistant answers customer questions by retrieving information from a PDF knowledge base and responds in a friendly, natural tone — just like a real support agent.",
+    details: {
+      description: [
+        "Developed a production-ready RAG chatbot backend that automates customer service inquiries for a dumpster rental company.",
+        "The system intelligently retrieves relevant information from a PDF knowledge base and generates contextually accurate responses without exposing source documents to users.",
+        "Designed with offline capability using local LLMs for privacy and cost efficiency, eliminating dependency on external APIs.",
+      ],
+      features: [
+        "PDF ingestion pipeline with automatic text chunking and processing",
+        "Vector embeddings for semantic search using embedding models",
+        "Retrieval Augmented Generation (RAG) pipeline for context-aware responses",
+        "FastAPI backend for high-performance, scalable API endpoints",
+        "Offline LLM integration for privacy-preserving inference",
+        "Natural language responses matching real support agent tone and style",
+        "Contextual answer generation based on retrieved PDF content",
+        "Support for customer inquiries about pricing, dumpster sizes, delivery windows, policies",
+        "Service availability and policy documentation automation",
+      ],
+      challenges: [
+        "Ensuring retrieved context is relevant and concise for accurate responses",
+        "Maintaining natural conversational tone while using retrieved information",
+        "Optimizing embedding and retrieval speed for real-time responses",
+        "Managing large PDF documents with varied formats and structures",
+        "Balancing offline capability with model performance and response quality",
+      ],
+      solution: [
+        "Implemented intelligent text chunking strategies with overlap for context preservation",
+        "Fine-tuned prompt engineering to blend retrieved information naturally into responses",
+        "Used vector similarity search with cosine distance for efficient retrieval",
+        "Built robust PDF parsing pipeline handling various document formats",
+        "Optimized model quantization for fast offline inference on standard hardware",
+      ]
+    },
+    github: "https://github.com/vishnudas08/rag-chatbot-fastapi",
+    skills: [textmodel],
+  },
   {
     id: 1,
     title: "Image Classification with CNN",
@@ -153,7 +252,7 @@ export const projects = [
     },
     github: "https://github.com/vishnudas08/Digit-Recognition-using-CNN", // ✅ Add GitHub link
     github2:"https://github.com/vishnudas08/binary-image-classification_PyTorch",
-    //linkedin: "https://www.linkedin.com/posts/your-post-id", // ✅ Add LinkedIn engagement lin
+    linkedin: "https://www.linkedin.com/in/darla-vishnu-69763a224/",
     skills: [
       pythonSkillIcon
     ]
@@ -271,6 +370,25 @@ export const projects = [
 ];
 
 export const experiences = [
+  {
+    role: "Freelance Machine Learning Engineer",
+    company: "Upwork · Freelance",
+    duration: "Jun 2025 - Present",
+    responsibilities: [
+      "Delivered production-ready AI solutions for clients in tech and data domains.",
+      "Completed key Upwork project developing/updating a deduction model on breadboard system, with client satisfaction and successful submission.",
+      "Specialized in practical ML deployment and GenAI customization.",
+      "Fine-tuning pre-trained models for NLP tasks including text classification, sentiment analysis, and language understanding using HuggingFace Transformers.",
+      "Recently completed LLM course on HuggingFace, practicing fine-tuning models for custom NLP problems and real-world applications.",
+      "Developing and optimizing computer vision models for image classification, image segmentation, and object detection tasks using PyTorch.",
+      "Recently delivered deduction model project via Upwork, showcasing model updates, testing, and client handover on breadboard system.",
+      "Expertise with PyTorch for regression models (e.g., employee bonus prediction, linear/logistic), iris classification, and deep learning models.",
+      "Advanced GenAI skills: RAG for custom LLMs, prompt engineering, fine-tuning architectures using HuggingFace ecosystem.",
+    ],
+    technologies: [
+      "PyTorch", "HuggingFace", "Transformers", "Random Forest", "Scikit-learn", "OpenCV", "GenAI", "RAG", "LLMs", "NLP Fine-tuning", "Image Segmentation", "Object Detection", "GitHub"
+    ],
+  },
 
   {
     role: "Machine Learning Intern",
@@ -287,6 +405,7 @@ export const experiences = [
     ],
   },
 ];
+
 
 
 export const certificates = [

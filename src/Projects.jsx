@@ -42,7 +42,7 @@ const Projects = () => {
 
             {/* Skill Icons */}
             <div className="absolute bottom-3 right-3 flex gap-2">
-              {proj.skills.map((icon, idx) => (
+              {proj.skills?.map((icon, idx) => (
                 <img key={idx} src={icon} alt="skill" className="w-16 h-auto" />
               ))}
             </div>
