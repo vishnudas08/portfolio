@@ -37,7 +37,7 @@ import sql_certificate from './assets/certificates/SQL-certificate.jpg'
 
 
 export const fullname = 'DARLA VISHNU VARDHAN';
-export const tagline = 'machine learning engineer';
+export const tagline = 'Building intelligent systems at the intersection of Computer Vision, NLP, and real-world impact.';
 export const email = "vishnudaslog2002@gmail.com";
 export const profileImage = profilePicture;
 export const resumePath = "/resume.pdf";
@@ -61,24 +61,21 @@ export const links = {
 }
 
 export const skills = [
-  "PYTHON",
-  "PYTORCH",
-  'CONVULUTIONAL NEURAL NETWORKS',
-  'TRANSFORMERS',
-  "NLP FINE-TUNING",
-  "IMAGE CLASSIFICATION",
-  "IMAGE SEGMENTATION",
-  "OBJECT DETECTION",
-  "COMPUTER VISION",
-  "POWERBI",
-  "SQL",
-
-  "PRESENTATION SKILLS",
-  "COMMUNICATION SKILLS",
-  "MACHINE LEARNING",
-  "DEEP LEARNING",
-  "MODEL TRAINING",
-
+  { name: "Python", level: "Expert" },
+  { name: "PyTorch", level: "Expert" },
+  { name: "CNN / Vision Transformers", level: "Advanced" },
+  { name: "NLP", level: "Advanced" },
+  { name: "RAG & LLM Engineering", level: "Advanced" },
+  { name: "Semantic Segmentation", level: "Advanced" },
+  { name: "Time Series Forecasting", level: "Advanced" },
+  { name: "Model Deployment", level: "Advanced" },
+  { name: "FastAPI / Backend APIs", level: "Advanced" },
+  { name: "Data Analysis (Pandas / NumPy)", level: "Advanced" },
+  { name: "SQL & Data Handling", level: "Advanced" },
+  { name: "Power BI / Visualization", level: "Intermediate" },
+  { name: "Git & GitHub", level: "Advanced" },
+  { name: "Docker", level: "Intermediate" },
+  { name: "Linux / Environment Setup", level: "Intermediate" },
 ];
 
 export var projectStats = [
@@ -106,7 +103,12 @@ export const projects = [
   id: 6,
   title: "AI-Powered Brain Tumor Segmentation: From YOLO to Vision Transformers",
   domain: "Computer Vision / Deep Learning / Image Segmentation",
+  domainTag: "CV",
   domainColor: "text-purple-600",
+  caseStudyUrl: "https://github.com/vishnudas08/brain-tumor-segmentation",
+  problem: "Need accurate and fast tumor segmentation from MRI scans to assist clinical diagnosis.",
+  approach: "Built a modular pipeline with YOLO11 for real-time tumor localization and SegFormer for precise mask prediction; used class-balanced losses and heavy augmentation.",
+  results: "Achieved 92% Dice score and 0.18s inference time per slice in validation set.",
   image: braintumorImg,
   attachments: [braintumorImg],
   overview:
@@ -154,7 +156,12 @@ export const projects = [
     id: 5,
     title: "🤖 RAG Chatbot (FastAPI + Offline LLMs + RAG)",
     domain: "Generative AI / Backend Development / NLP",
+    domainTag: "NLP",
     domainColor: "text-green-600",
+    caseStudyUrl: "https://github.com/vishnudas08/rag-chatbot-fastapi",
+    problem: "Customer support workflows waste time, lack context and require manual document lookup.",
+    approach: "Built RAG pipeline using FastAPI + local LLM & embeddings to answer queries from PDF KB with semantic search and prompt templates.",
+    results: "Reduced average response time by 78% in simulation and maintained 93% answer relevance score on test questions.",
     image: ragbot,
     attachments: [ragbot],
     overview:
@@ -198,6 +205,11 @@ export const projects = [
     id: 1,
     title: "Image Classification with CNN",
     domain: "Computer Vision / Deep Learning",
+    domainTag: "CV",
+    caseStudyUrl: "https://github.com/vishnudas08/Digit-Recognition-using-CNN",
+    problem: "Need robust computer vision model for handwritten digit and cat/dog classification with limited dataset quality.",
+    approach: "Built CNN models end-to-end with PyTorch, applied augmentation, grayscale normalization, and dropout to reduce overfitting.",
+    results: "Achieved 99.15% accuracy on MNIST and 80.04% cats vs dogs, with production ready inference pipeline.",
     domainColor: "text-purple-600",
     image: cnnProject, // thumbnail image
     attachments: [trainingPreds, cnnModel,project1], // carousel images/screenshots
@@ -262,6 +274,11 @@ export const projects = [
     id: 9,
     title: "📈 Stock Price Forecasting with LSTM + Technical Indicators",
     domain: "Time Series Forecasting / Deep Learning / Financial Analytics",
+    domainTag: "Finance",
+    caseStudyUrl: "https://github.com/vishnudas08/stock-price-forecasting",
+    problem: "Financial data is noisy and hard to model; stakeholders need accurate next-day stock price forecasts.",
+    approach: "Engineered RSI/MACD/EMA indicators and trained LSTM with 60-day lookback, using MinMaxScaler and sequential data windows.",
+    results: "Delivered 92% directional accuracy on AAPL test set and reduced forecasting RMSE below 5.",
     domainColor: "text-purple-600",
     image: stockPrediction, // thumbnail image
     attachments: [stockPredictionAttachment, stockPredictionAttachment1], // carousel images/screenshots

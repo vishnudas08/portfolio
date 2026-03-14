@@ -38,7 +38,28 @@ const ProjectModal = ({ isOpen, onClose, project, currentSlide, setCurrentSlide 
               </p>
 
               {/* Description */}
-              <p className="text-gray-700 leading-relaxed mb-6">{project.overview}</p>
+              <p className="text-gray-700 leading-relaxed mb-4">{project.overview}</p>
+
+              {project.problem && (
+                <div className="mb-3">
+                  <h4 className="text-sm font-semibold text-gray-800">Problem Statement</h4>
+                  <p className="text-gray-700 text-sm">{project.problem}</p>
+                </div>
+              )}
+
+              {project.approach && (
+                <div className="mb-3">
+                  <h4 className="text-sm font-semibold text-gray-800">Approach</h4>
+                  <p className="text-gray-700 text-sm">{project.approach}</p>
+                </div>
+              )}
+
+              {project.results && (
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-800">Key Result</h4>
+                  <p className="text-gray-700 text-sm">{project.results}</p>
+                </div>
+              )}
 
               {/* Buttons */}
               <div className="mt-6 flex flex-wrap gap-4">

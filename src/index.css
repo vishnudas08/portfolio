@@ -6,3 +6,14 @@ html {
 .header-name {
   @apply text-4xl md:text-4xl font-bold text-gray-800 mb-2;
 }
+
+.skill-bar-fill {
+  width: 0;
+  animation: fill-bar 1s ease-out forwards;
+}
+
+@keyframes fill-bar {
+  to {
+    width: var(--target-width);
+  }
+}
