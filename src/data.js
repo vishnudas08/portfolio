@@ -9,6 +9,7 @@ import profilePicture from './assets/Vishnu_btech.png'
 import transformersIcon from './assets/skills/transformer.png' 
 import pytorchIcon from './assets/skills/pytorch-612.png'
 import textmodel from './assets/skills/textmodel.png'
+import ragbot from './assets/skills/Rentalbot.png'
 import braintumorImg from './assets/projects/braintumorImg.jpg'
 import dlIcon from './assets/skills/dl.png'
 
@@ -154,8 +155,8 @@ export const projects = [
     title: "🤖 RAG Chatbot (FastAPI + Offline LLMs + RAG)",
     domain: "Generative AI / Backend Development / NLP",
     domainColor: "text-green-600",
-    image: textmodel,
-    attachments: [textmodel],
+    image: ragbot,
+    attachments: [ragbot],
     overview:
       "Built an intelligent customer service chatbot for a dumpster rental company using Retrieval Augmented Generation (RAG). The assistant answers customer questions by retrieving information from a PDF knowledge base and responds in a friendly, natural tone — just like a real support agent.",
     details: {
@@ -191,7 +192,7 @@ export const projects = [
       ]
     },
     github: "https://github.com/vishnudas08/rag-chatbot-fastapi",
-    skills: [textmodel],
+   
   },
   {
     id: 1,
